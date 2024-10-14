@@ -3,7 +3,7 @@ using UnityEngine.XR.ARFoundation;
 
 namespace UnityEngine.XR.ARFoundation.Samples
 {
-    public class HampusARPlaceObject : MonoBehaviour
+    public class ARPlaceObject : MonoBehaviour
     {
         [SerializeField]
         [Tooltip("The prefab to be placed or moved.")]
@@ -51,15 +51,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
             // If no robot has been placed yet, spawn one
             if (m_SpawnedObject == null)
             {
+                // Instantiate the robot at the hit position but do not move it yet
                 m_SpawnedObject = Instantiate(m_PrefabToPlace, hitPose.pose.position, hitPose.pose.rotation, hitPose.trackable.transform.parent);
 
-                // Add movement logic
-                RobotMovement robotMovement = m_SpawnedObject.GetComponent<RobotMovement>();
-                if (robotMovement != null)
-                {
-                    Vector3 targetPosition = hitPose.pose.position + new Vector3(1.0f, 0, 1.0f);
-                    robotMovement.SetTarget(targetPosition);
-                }
+                // No need to call SetTarget here. The robot will stay still.
             }
             else
             {

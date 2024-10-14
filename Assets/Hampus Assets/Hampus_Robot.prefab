@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8396551348068387529}
   - component: {fileID: 8564681777406475127}
+  - component: {fileID: -8734931188204712490}
   m_Layer: 0
   m_Name: Hampus_Robot
   m_TagString: Untagged
@@ -46,7 +47,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  targetPosition: {x: 0, y: 0, z: 0}
+--- !u!95 &-8734931188204712490
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8168141006586082589}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2cf9486a4a4515408eea076990443bd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &662691957916724496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104,6 +125,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4101419520308672193, guid: d93d5415c51fa49aba66e61ec7b78b34,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6790265602204177959, guid: d93d5415c51fa49aba66e61ec7b78b34,
         type: 3}
